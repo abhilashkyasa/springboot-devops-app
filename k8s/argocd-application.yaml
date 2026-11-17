@@ -1,0 +1,19 @@
+# Apply once to the cluster running Argo CD:  kubectl apply -f k8s/argocd-application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: springboot-devops-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/abhilashkyasa/springboot-devops-app.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: springboot-demo
+  syncPolicy:
+    # Manual sync on purpose: Opsera's Argo CD step triggers the sync after the approval gate
+    syncOptions:
+      - CreateNamespace=true

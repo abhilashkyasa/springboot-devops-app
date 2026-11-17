@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: springboot-demo
+resources:
+  - deployment.yaml
+  - service.yaml
+images:
+  # Replace newName with your ECR repo URI; newTag is bumped per build
+  # (by Opsera's Argo CD step, or by hand for a dry run)
+  - name: springboot-devops-app
+    newName: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/springboot-devops-app
+    newTag: latest
