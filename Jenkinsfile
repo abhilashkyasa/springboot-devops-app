@@ -26,7 +26,7 @@ pipeline {
         stage('Verify JAR') {
             steps {
                 echo 'Verifying generated JAR'
-                sh 'ls -lh target/springboot-devops-app-0.0.1-SNAPSHOT.jar'
+                sh 'ls -lh target/app.jar'
             }
         }
 
