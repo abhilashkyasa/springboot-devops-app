@@ -8,5 +8,5 @@ images:
   # Replace newName with your ECR repo URI; newTag is bumped per build
   # (by Opsera's Argo CD step, or by hand for a dry run)
   - name: springboot-devops-app
-    newName: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/springboot-devops-app
+    newName: 167341897161.dkr.ecr.ap-south-1.amazonaws.com/springboot-devops-app
     newTag: latest
