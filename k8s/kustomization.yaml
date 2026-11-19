@@ -9,4 +9,4 @@ resources:
 images:
 - name: springboot-devops-app
   newName: 167341897161.dkr.ecr.ap-south-1.amazonaws.com/springboot-devops-app
-  newTag: "12"
+  newTag: "13"
