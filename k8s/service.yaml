@@ -6,7 +6,7 @@ metadata:
     app: springboot-devops-app
 spec:
   # LoadBalancer gives a public URL on EKS for the demo; switch to ClusterIP + Ingress for real use
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: springboot-devops-app
   ports:
