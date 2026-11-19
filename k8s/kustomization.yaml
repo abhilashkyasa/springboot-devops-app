@@ -8,5 +8,5 @@ resources:
   # (by Opsera's Argo CD step, or by hand for a dry run)
 images:
 - name: springboot-devops-app
-  newName: 167341897161.dkr.ecr.ap-south-1.amazonaws.com/springboot-devops-app
-  newTag: "13"
+  newName: 299276269236.dkr.ecr.eu-north-1.amazonaws.com/qa-aws-repo
+  newTag: "14"
